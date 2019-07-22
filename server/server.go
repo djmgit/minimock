@@ -2,11 +2,10 @@ package server
 
 import (
 	"minimock/handlers"
-	"net/http",
-	"strconv"
+	"net/http"
 )
 
-func Server(port int) {
+func Server(port string) {
 	http.HandleFunc("/", handlers.Handler)
-	http.ListenAndServe(":" + strconv.FormatInt(port, 10), nil)
+	http.ListenAndServe(":" + port, nil)
 }
