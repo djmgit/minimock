@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func handler(w http.ResponseWriter, r *http.Request) {
+func Handler(w http.ResponseWriter, r *http.Request) {
 	serverResponse := "Hellow world"
 	fmt.Fprintf(w, serverResponse)
 }
